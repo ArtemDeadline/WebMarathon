@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta name="description" content="t02. Timer">
+        <title>Timer</title>
+    </head>
+
+    <body>
+        <h1>Timer</h1>
+        <h2 id="timer">Timer title</h2>
+        <h3>Left <span id="count"></span> times</h3>
+        <h3>Delay: <span id="delay"></span> ms</h3>
+        <button style="background-color:green" type="button" onclick='runTimer("MyTimer", 4500, 8)' name="button">Start timer!</button>
+        <button style="background-color:red;" type="button" onclick="timer.stop(timer)" name="button">Stop next cycle!</button>
+        <button style="background-color:yellow" type="button" onclick="timer.continue(timer)" name="button">Start again!</button>
+        <script src="js/script.js" type="text/javascript">
+        </script>
+    </body>
+
+</html>

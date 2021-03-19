@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+    background-color: blanchedalmond;
+    border-radius: 50px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 10px;
+}
+
+img {
+    display: block;
+    border-radius: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+img:hover {
+    border: 3px solid gold;
+}
+h1:hover {
+    border: 3px solid lime;
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+row::after{
+    content: ""
+    clear:both;
+    display: table;
+}
+.img_button {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    border: 1px solid chocolate;
+}
