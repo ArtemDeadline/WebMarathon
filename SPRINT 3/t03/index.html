@@ -7,22 +7,29 @@
         <title>Norm Home</title>
     </head>
     <body>
-        <h1>Norm</h1>
-        <img src="assets/images/norm.gif" alt="">
+        <h1 id="name">Norm</h1>
+        <img src="assets/images/norm.gif" id="norm" alt="">
 
         <br>
-        
-        <div class="row">
-            <div class="column">
-                <img src="assets/images/feed.gif" alt="feed" class="img_button">
-            </div>
-            <div class="column">
-                <img src="assets/images/cook.jpg" alt="cook" class="img_button">
-            </div>
-            <div class="column">
-                <img src="assets/images/sleep.jpg" alt="sleep" class="img_button">
-            </div>
-        </div>
 
+        <div class="row">
+
+            <div class="column">
+                <img id="feed" src="assets/images/cook.jpg" onclick="norm.feed();" alt="feed" class="img_button">
+            </div>
+            <div class="column">
+                <img id="sleep" src="assets/images/sleep.jpg" onclick="norm.sleepFor();" alt="sleep" class="img_button">
+            </div>
+
+            <div class="hero_column">
+                <img id="trick" src="assets/images/trick.gif" onclick="norm.trick();" alt="trick" class="img_button">
+            </div>
+            <div class="hero_column">
+                <img id="sport" src="assets/images/sport.gif" onclick="norm.treat();" alt="sport" class="img_button">
+            </div>
+
+        </div>
+        <img src="assets/images/procrastinator.jpg" id="mode" onclick="switch_norm(norm);" alt="Switch mode">
+        <script src="js/script.js"></script>
     </body>
 </html>

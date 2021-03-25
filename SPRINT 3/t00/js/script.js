@@ -14,6 +14,7 @@ houseBlueprint.owner;
 houseBlueprint.size;
 houseBlueprint.getDaysToBuild = function(){return this.size*2;};
 houseBlueprint._averageBuildSpeed = 0.5;
+
 var house1 = new HouseBuilder("Kyivska, 21", "Comfortable house", "Lushyn's family", 189, 8);
 const house= new HouseBuilder('88 Crescent Avenue','Spacious town house with wood flooring, 2-car garage, and a back patio.','J. Smith',110,5);
 console.log(house.address); // '88 Crescent Avenue'

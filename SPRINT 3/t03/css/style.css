@@ -21,19 +21,36 @@ img:hover {
 h1:hover {
     border: 3px solid lime;
 }
-.column {
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.row div {
     float: left;
-    width: 25%;
+    width: 20%;
+    height: 100px;
     padding: 5px;
+    margin-left: 30px;
+}
+
+.hero_column {
+    display: none;
 }
 row::after{
-    content: ""
+    content: "";
     clear:both;
     display: table;
 }
 .img_button {
+    height: 100%;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
     border: 1px solid chocolate;
+}
+#mode {
+    height: 100px;
+    width: auto;
 }
