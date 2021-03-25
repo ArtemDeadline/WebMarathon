@@ -1,19 +1,20 @@
-function HouseBuilder(address, description, owner, size, roomCount){
-    this.roomCount = roomCount
+function HouseBlueprint(address, description, owner, size){
     this.address = address;
     this.date = new Date();
     this.description = description;
     this.owner = owner;
     this.size = size;
+    this._averageBuildSpeed = 0.5;
+    this.getDaysToBuild = function(){return this.size/this._averageBuildSpeed;};
 }
-var houseBlueprint = HouseBuilder.prototype;
-houseBlueprint.address;
-houseBlueprint.date;
-houseBlueprint.description;
-houseBlueprint.owner;
-houseBlueprint.size;
-houseBlueprint.getDaysToBuild = function(){return this.size*2;};
-houseBlueprint._averageBuildSpeed = 0.5;
+
+function HouseBuilder(address, description, owner, size, roomCount){
+    HouseBlueprint.call(this, address, description, owner, size);
+    this.roomCount = roomCount;
+}
+
+HouseBuilder.prototype = Object.create(HouseBlueprint.prototype);
+HouseBuilder.prototype.constructor = HouseBuilder;
 
 var house1 = new HouseBuilder("Kyivska, 21", "Comfortable house", "Lushyn's family", 189, 8);
 const house= new HouseBuilder('88 Crescent Avenue','Spacious town house with wood flooring, 2-car garage, and a back patio.','J. Smith',110,5);
